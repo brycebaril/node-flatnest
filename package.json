@@ -6,10 +6,10 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "tape": "~1.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "node test/"
   },
