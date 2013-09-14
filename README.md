@@ -89,7 +89,7 @@ var flat = fn.flatten(obj)
 
 console.log(flat)
 
-// { aa: 'cat', bb: [Circular] }
+// { aa: 'cat', bb: '[Circular (this)]' }
 
 var nested = fn.nest(obj)
 
