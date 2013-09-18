@@ -19,5 +19,6 @@ test("seek", function (t) {
   t.deepEquals(seek(obj, "bb.cc"), obj["bb"]["cc"])
   t.equals(seek(obj, "bb.cc[0].ee"), obj["bb"]["cc"][0]["ee"])
   t.equals(seek(obj, "ff[0][1]"), obj["ff"][0][1])
+  t.ok(seek(obj, "bb.zz.kk") === undefined)
   t.end()
 })

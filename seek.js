@@ -9,6 +9,7 @@ function seek(obj, path) {
   var len = pathBits.length
   var layer = obj
   for (var i = 0; i < len; i += 2) {
+    if (layer == null) return undefined
     var key = pathBits[i]
     layer = layer[key]
   }
