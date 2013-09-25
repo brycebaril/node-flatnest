@@ -3,6 +3,9 @@ flatnest
 
 [![NPM](https://nodei.co/npm/flatnest.png)](https://nodei.co/npm/flatnest/)
 
+[![david-dm](https://david-dm.org/brycebaril/node-flatnest.png)](https://david-dm.org/brycebaril/node-flatnest/)
+[![david-dm](https://david-dm.org/brycebaril/node-flatnest/dev-status.png)](https://david-dm.org/brycebaril/node-flatnest#info=devDependencies/)
+
 Flatten/Nest Javascript objects.
 
 ```javascript
