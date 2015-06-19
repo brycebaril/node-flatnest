@@ -132,3 +132,10 @@ test("complex", function (t) {
   t.deepEquals(nest(stats), expect, "nest complex structure")
   t.end()
 })
+
+test("nest empty", function (t) {
+  var struct = {}
+  var expect = {}
+  t.deepEquals(nest(struct), expect, "empty object is still empty")
+  t.end()
+})

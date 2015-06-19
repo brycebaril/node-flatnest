@@ -10,6 +10,9 @@ function flatten(obj) {
     var i, len, type, keys, circularCheck, loc
 
     if (value == null) {
+      if (prefix === "") {
+        return
+      }
       flattened[prefix] = null
       return
     }

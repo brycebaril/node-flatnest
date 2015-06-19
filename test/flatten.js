@@ -141,3 +141,10 @@ test("complex", function (t) {
   t.deepEquals(flatten(stats), expect, "flatten complex structure")
   t.end()
 })
+
+test("flatten empty", function (t) {
+  var struct = {}
+  var expect = {}
+  t.deepEquals(flatten(struct), expect, "empty object is still empty")
+  t.end()
+})
