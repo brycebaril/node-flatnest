@@ -39,7 +39,7 @@ function flatten(obj) {
       }
       keys = Object.keys(value)
       len = keys.length
-      if (prefix) prefix = prefix + "."
+      if (prefix && len.length > 0) prefix = prefix + "."
       if (len == 0) _route(prefix, null)
       for (i = 0; i < len; i++) {
         _route(prefix + keys[i], value[keys[i]])
