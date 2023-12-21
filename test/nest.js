@@ -1,3 +1,5 @@
+'use strict'
+
 var test = require("tape").test
 
 var nest = require("../nest")
@@ -137,5 +139,13 @@ test("nest empty", function (t) {
   var struct = {}
   var expect = {}
   t.deepEquals(nest(struct), expect, "empty object is still empty")
+  t.end()
+})
+
+test("no prototype pollution", function (t) {
+  nest({'constructor.prototype.fail': true})
+  nest({'__proto__.bad': true})
+  t.false({}.fail, "constructor.prototype not polluted")
+  t.false({}.bad, "__proto__ not polluted")
   t.end()
 })

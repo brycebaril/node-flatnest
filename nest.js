@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = nest
 
 var seek = require("./seek")
@@ -37,6 +39,8 @@ function insert(target, path, value) {
   var len = pathBits.length
   for (var i = 0; i < len; i += 2) {
     var key = pathBits[i]
+    if (key === "__proto__") continue
+    if (key === "constructor" && typeof target[key] == "function") continue
     var type = pathBits[i + 1]
 
     if (type == null && key) parent[key] = value

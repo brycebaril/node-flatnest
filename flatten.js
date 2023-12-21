@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = flatten
 
 function flatten(obj) {
